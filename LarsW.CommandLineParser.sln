@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LarsW.CommandLineParser.TestApp", "LarsW.CommandLineParser.TestApp\LarsW.CommandLineParser.TestApp.csproj", "{4C0871B6-88F1-415C-A997-CF8559A7A372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LarsW.CommandlineParser", "LarsW.CommandlineParser\LarsW.CommandlineParser.csproj", "{D222E890-8948-4A74-A59A-DB682AA6AC4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C0871B6-88F1-415C-A997-CF8559A7A372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0871B6-88F1-415C-A997-CF8559A7A372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0871B6-88F1-415C-A997-CF8559A7A372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0871B6-88F1-415C-A997-CF8559A7A372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D222E890-8948-4A74-A59A-DB682AA6AC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D222E890-8948-4A74-A59A-DB682AA6AC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D222E890-8948-4A74-A59A-DB682AA6AC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D222E890-8948-4A74-A59A-DB682AA6AC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
