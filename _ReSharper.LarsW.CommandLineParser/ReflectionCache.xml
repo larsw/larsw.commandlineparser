@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Assemblies Version="1073741836">
+  <Assembly Name="Microsoft.M.Grammar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="407a588d-62d3-4c1d-9fc6-f6415a8d5e95" Timestamp="633685612700000000" />
+  <Assembly Name="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="c492e9f7-f29c-4211-8cd7-d904f7920097" Timestamp="633625914400708065" XmlDocIndexTimestamp="633490003300000000" />
+  <Assembly Name="System.Dataflow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="8da63f1e-d8cc-47e5-8caf-94e030967c0f" Timestamp="633685612700000000" />
+  <Assembly Name="Xaml, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="5502b587-b989-4e09-bec4-b4508dde4bd5" Timestamp="633685612700000000" />
+  <Assembly Name="JetBrains.Annotations, Version=4.1.933.3, Culture=neutral, PublicKeyToken=1010a0d8d6380325" Image="c14bd60c-6bbc-42a3-9d33-32a3fb031c6f" Timestamp="633559706920000000" XmlDocIndexTimestamp="633559706920000000" />
+</Assemblies>

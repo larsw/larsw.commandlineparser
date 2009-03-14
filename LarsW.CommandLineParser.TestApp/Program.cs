@@ -1,11 +1,13 @@
-﻿namespace Mockup.CommandLineParser
+﻿namespace LarsW.CommandLineParser.TestApp
 {
-    using LarsW.CommandlineParser;
-using System.Text;
+    using System;
+    using System.Text;
 
     class Processor
     {
         private StringBuilder _output = new StringBuilder();
+        public bool BogusSet { get; set; }
+
         public string Output
         {
             get { return _output.ToString(); }
@@ -20,6 +22,7 @@ using System.Text;
         [CommandLineArgumentHandler("b", "bogus", "Just a bogus test command.")]
         public void BHandler()
         {
+            BogusSet = true;
         }
     }
 
@@ -28,7 +31,11 @@ using System.Text;
         static void Main(string[] args)
         {
             var processor = new Processor();
+            Console.WriteLine("Processing the command line:");
             CommandLineProcessor.Process(processor, args);
+            Console.WriteLine("Output: " + processor.Output);
+            Console.WriteLine("Bogus set: " + processor.BogusSet);
+            Console.ReadLine();
         }
     }
 }

@@ -1,14 +1,14 @@
-using System;
-
-namespace LarsW.CommandlineParser
+namespace LarsW.CommandLineParser
 {
-    public sealed class CommandlineArgumentArgs : EventArgs
+    using System;
+
+    public sealed class CommandLineArgumentArgs : EventArgs
     {
         public string ShortArgumentName { get; private set; }
         public string LongArgumentName { get; private set; }
         public string Argument { get; private set; }
 
-        public CommandlineArgumentArgs(string shortArgumentName, string longArgumentName, string argument)
+        public CommandLineArgumentArgs(string shortArgumentName, string longArgumentName, string argument)
         {
             ShortArgumentName = shortArgumentName;
             LongArgumentName = longArgumentName;

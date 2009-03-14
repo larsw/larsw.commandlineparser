@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LarsW.CommandLineParser.TestApp", "LarsW.CommandLineParser.TestApp\LarsW.CommandLineParser.TestApp.csproj", "{4C0871B6-88F1-415C-A997-CF8559A7A372}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LarsW.CommandlineParser", "LarsW.CommandlineParser\LarsW.CommandlineParser.csproj", "{D222E890-8948-4A74-A59A-DB682AA6AC4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LarsW.CommandLineParser", "LarsW.CommandlineParser\LarsW.CommandLineParser.csproj", "{D222E890-8948-4A74-A59A-DB682AA6AC4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

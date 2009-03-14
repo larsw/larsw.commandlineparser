@@ -15,8 +15,8 @@
     <ProjectGuid>{D222E890-8948-4A74-A59A-DB682AA6AC4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LarsW.CommandlineParser</RootNamespace>
-    <AssemblyName>LarsW.CommandlineParser</AssemblyName>
+    <RootNamespace>LarsW.CommandLineParser</RootNamespace>
+    <AssemblyName>LarsW.CommandLineParser</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandLineArgumentHandlerAttribute.cs" />
-    <Compile Include="CommandlineArgumentArgs.cs" />
+    <Compile Include="CommandLineArgumentArgs.cs" />
+    <Compile Include="CommandLineArgumentHandlerNotFoundException.cs" />
+    <Compile Include="CommandLineParsingFailedException.cs" />
     <Compile Include="CommandLineProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

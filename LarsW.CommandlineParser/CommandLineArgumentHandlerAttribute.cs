@@ -1,7 +1,8 @@
-namespace LarsW.CommandlineParser
+namespace LarsW.CommandLineParser
 {
     using System;
 
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public sealed class CommandLineArgumentHandlerAttribute : Attribute
     {
         public string ShortArgumentName { get; private set; }
