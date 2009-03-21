@@ -1,9 +1,0 @@
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\bin\Debug\LarsW.CommandLineParser.TestApp.exe
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\bin\Debug\LarsW.CommandLineParser.TestApp.pdb
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\bin\Debug\LarsW.CommandLineParser.dll
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\bin\Debug\Xaml.dll
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\bin\Debug\System.Dataflow.dll
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\bin\Debug\LarsW.CommandLineParser.pdb
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\obj\Debug\ResolveAssemblyReference.cache
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\obj\Debug\LarsW.CommandLineParser.TestApp.exe
-C:\git\LarsW.CommandLineParser\LarsW.CommandLineParser.TestApp\obj\Debug\LarsW.CommandLineParser.TestApp.pdb
