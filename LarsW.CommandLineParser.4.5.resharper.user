@@ -1,0 +1,76 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="parser" priority="1" />
+      <Item value="boundValues" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="string" priority="2" />
+      <Item value="LanguageName" priority="0" />
+      <Item value="Environment" priority="3" />
+      <Item value="var" priority="0" />
+      <Item value="assemblyName" priority="0" />
+      <Item value="ProcessorArchitecture" priority="0" />
+      <Item value="Process" priority="0" />
+      <Item value="handlerInstance" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="return" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Dataflow.DynamicParser">
+      <Item value="Lexer" priority="0" />
+      <Item value="IncrementalParse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Dataflow.ILexer">
+      <Item value="TokenActionRequest" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="CommandLine" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="IndexOf" priority="0" />
+      <Item value="Substring" priority="0" />
+      <Item value="Trim" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:cmd.mg" caret="684" scrollPosition="0|0" />
+      <File id="d:Miscellaneous Files/f:MUrlMode.cs" caret="0" scrollPosition="0|0" />
+      <File id="d:Miscellaneous Files/f:MUrlLanguageServiceItem.cs" caret="0" scrollPosition="0|0" />
+      <File id="d:Miscellaneous Files/f:WebStatement.cs" caret="0" scrollPosition="0|0" />
+      <File id="d:Miscellaneous Files/f:Program.cs" caret="2591" scrollPosition="0|44" />
+      <File id="4C0871B6-88F1-415C-A997-CF8559A7A372/f:Program.cs" caret="897" scrollPosition="0|0" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="1482" scrollPosition="0|31" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="0" scrollPosition="0|0" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:cmd.mg" caret="567" scrollPosition="0|0" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:cmd.mg" caret="114" scrollPosition="0|0" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="4392" scrollPosition="0|63" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="4563" scrollPosition="0|64" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="315" scrollPosition="0|0" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="2962" scrollPosition="0|54" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="1267" scrollPosition="0|9" />
+      <File id="4C0871B6-88F1-415C-A997-CF8559A7A372/f:Program.cs" caret="935" scrollPosition="0|0" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="1076" scrollPosition="0|13" />
+      <File id="D222E890-8948-4A74-A59A-DB682AA6AC4C/f:CommandLineProcessor.cs" caret="558" scrollPosition="0|13" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+</Configuration>

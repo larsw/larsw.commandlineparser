@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace LarsW.CommandLineParser
+﻿namespace LarsW.CommandLineParser
 {
     using System;
     using System.Collections.Generic;
@@ -10,23 +8,40 @@ namespace LarsW.CommandLineParser
     using System.Linq;
     using System.Reflection;
 
+    /// <summary>
+    /// Processes the command line and invoke handlers for the command line arguments.
+    /// </summary>
     public class CommandLineProcessor
     {
-        internal class Handler
-        {
-            public MethodInfo MethodInfo { get; set; }
-            public CommandLineArgumentHandlerAttribute Attribute { get; set; }
-        }
         private static List<Handler> _handlers = new List<Handler>();
+        private const string LanguageName = "LarsW.Languages.CommandLineLang";
 
-        public event EventHandler<CommandLineArgumentArgs> ProcessingArgument = delegate { };
-
-        public static void Process(object handlerInstance, string[] args)
+        public static string CurrentCommandline
         {
-            var parser = DynamicParser.LoadFromResource(Assembly.GetExecutingAssembly().GetName().Name, "LarsW.Languages.CommandLineLang");
+            get
+            {
+                return Environment.CommandLine.Substring(Environment.CommandLine.IndexOf(' ')).Trim();
+            }
+        }
 
-            string commandLine = null;
-            commandLine = BuildCommandLine(args);
+        /// <summary>
+        /// Processes the command line.
+        /// </summary>
+        /// <param name="handlerInstance">Instance that contains the parameter handlers.</param>
+        public static void Process(object handlerInstance)
+        {
+            Process(handlerInstance, CurrentCommandline);
+        }
+
+        /// <summary>
+        /// Processes a command line.
+        /// </summary>
+        /// <param name="handlerInstance">Instance that contains the parameter handlers.</param>
+        /// <param name="commandLine">The command line.</param>
+        public static void Process(object handlerInstance, string commandLine)
+        {
+            var assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+            var parser = DynamicParser.LoadFromResource(assemblyName, LanguageName);
             var errorReporter = ErrorReporter.Standard;
             var root = parser.Parse<object>(null, new StringReader(commandLine), errorReporter);
             if (root == null)
@@ -36,12 +51,7 @@ namespace LarsW.CommandLineParser
             var builder = parser.GraphBuilder;
 
             var handlerType = handlerInstance.GetType();
-            _handlers = (from methodInfo in handlerType.GetMethods()
-                            let attr =
-                                Attribute.GetCustomAttribute(methodInfo, typeof (CommandLineArgumentHandlerAttribute))
-                                as CommandLineArgumentHandlerAttribute
-                            where attr != null
-                            select new Handler {MethodInfo = methodInfo, Attribute = attr}).ToList();
+            DiscoverHandlerMethods(handlerType);
             
             foreach (var element in builder.GetSuccessors(root))
             {
@@ -53,23 +63,18 @@ namespace LarsW.CommandLineParser
             }
         }
 
-        private static string BuildCommandLine(string[] args)
+        private static void DiscoverHandlerMethods(Type handlerType)
         {
-            var sb = new StringBuilder();
-            for(int i = 0; i < args.Length; i++)
-            {
-                string val = args[i];
-                if (val.Contains(" ") || val.Contains('\t'))
-                    val = string.Concat("\"", val, "\"");
-
-                sb.Append(string.Concat(val, " "));
-            }
-            return sb.ToString().Trim();
+            _handlers = (from methodInfo in handlerType.GetMethods()
+                         let attr =
+                             Attribute.GetCustomAttribute(methodInfo, typeof (CommandLineArgumentHandlerAttribute))
+                             as CommandLineArgumentHandlerAttribute
+                         where attr != null
+                         select new Handler {MethodInfo = methodInfo, Attribute = attr}).ToList();
         }
 
         private static void ProcessParameter(IGraphBuilder builder, object parameterNode, object handlerInstance)
         {
-            
             var subNodes = builder.GetSuccessors(parameterNode);
             Debug.Assert(subNodes != null && subNodes.Count() == 2);
 
@@ -85,14 +90,25 @@ namespace LarsW.CommandLineParser
                 payloadValue = payloadValueNodes.First().ToString();
                 Debug.Assert(builder.IsNode(payloadNode));
             }
+            InvokeHandler(nameValue, payloadValue, handlerInstance);
+        }
+
+        private static void InvokeHandler(string nameValue, string payloadValue, object handlerInstance)
+        {
             var handler = _handlers.Find(h => (h.Attribute.LongArgumentName == nameValue ||
-                                 h.Attribute.ShortArgumentName == nameValue));
+                                               h.Attribute.ShortArgumentName == nameValue));
             if (handler == null)
                 throw new CommandLineArgumentHandlerNotFoundException(nameValue);
             if (payloadValue != null)
                 handler.MethodInfo.Invoke(handlerInstance, new object[] {payloadValue});
             else
                 handler.MethodInfo.Invoke(handlerInstance, null);
+        }
+
+        class Handler
+        {
+            public MethodInfo MethodInfo { get; set; }
+            public CommandLineArgumentHandlerAttribute Attribute { get; set; }
         }
     }
 }

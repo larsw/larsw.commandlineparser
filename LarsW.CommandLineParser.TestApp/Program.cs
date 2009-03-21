@@ -32,7 +32,7 @@
         {
             var processor = new Processor();
             Console.WriteLine("Processing the command line:");
-            CommandLineProcessor.Process(processor, args);
+            CommandLineProcessor.Process(processor);
             Console.WriteLine("Output: " + processor.Output);
             Console.WriteLine("Bogus set: " + processor.BogusSet);
             Console.ReadLine();

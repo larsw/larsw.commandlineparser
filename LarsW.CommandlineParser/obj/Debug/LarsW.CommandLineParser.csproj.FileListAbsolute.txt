@@ -1,0 +1,11 @@
+obj\Debug\mgargs.rsp
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\bin\Debug\LarsW.CommandLineParser.dll
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\bin\Debug\LarsW.CommandLineParser.pdb
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\bin\Debug\Microsoft.M.Grammar.dll
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\bin\Debug\System.Dataflow.dll
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\bin\Debug\Xaml.dll
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\obj\Debug\ResolveAssemblyReference.cache
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\obj\Debug\LarsW.CommandLineParser.obj.Debug.LarsW.CommandLineParser.resources.resources
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\obj\Debug\LarsW.CommandLineParser.csproj.GenerateResource.Cache
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\obj\Debug\LarsW.CommandLineParser.dll
+C:\git\LarsW.CommandLineParser\LarsW.CommandlineParser\obj\Debug\LarsW.CommandLineParser.pdb
